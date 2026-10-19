@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore a beautiful responsive image gallery.">
+  <title>Frame — Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">FRAME<span>.</span></a>
+    <p>Moments worth remembering</p>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">A VISUAL COLLECTION</p>
+      <h1>Explore the <span>Gallery.</span></h1>
+      <p class="subtitle intro-text">
+        A collection of beautiful places, quiet moments and adventures.
+      </p>
+    </section>
+
+    <nav class="filters" aria-label="Filter images by category">
+      <button class="filter-btn active" data-filter="all">All Photos</button>
+      <button class="filter-btn" data-filter="nature">Nature</button>
+      <button class="filter-btn" data-filter="architecture">Architecture</button>
+      <button class="filter-btn" data-filter="travel">Travel</button>
+    </nav>
+
+    <section class="gallery" id="gallery" aria-label="Image gallery">
+      <!-- JavaScript renders the images here -->
+    </section>
+
+    <p class="photo-count" id="photo-count" aria-live="polite"></p>
+  </main>
+
+  <footer>
+    <p>Designed & built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+    <button class="close-btn" id="close-btn" aria-label="Close viewer">
+      &times;
+    </button>
+    <button class="nav-btn prev-btn" id="prev-btn"
+      aria-label="Previous image">&#10094;</button>
+
+    <figure class="lightbox-figure">
+      <img id="lightbox-image" src="" alt="">
+      <figcaption id="lightbox-caption"></figcaption>
+      <p id="image-counter" aria-live="polite"></p>
+    </figure>
+
+    <button class="nav-btn next-btn" id="next-btn"
+      aria-label="Next image">&#10095;</button>
+  </dialog>
+</body>
+</html>
